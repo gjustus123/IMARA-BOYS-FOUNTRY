@@ -1,0 +1,26 @@
+{
+  "name": "imara-boys-foundry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjustus123/IMARA-BOYS-FOUNTRY.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gjustus123/IMARA-BOYS-FOUNTRY/issues"
+  },
+  "homepage": "https://github.com/gjustus123/IMARA-BOYS-FOUNTRY#readme",
+  "devDependencies": {
+    "prettier": "3.10.1"
+  }
+}
