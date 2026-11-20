@@ -283,6 +283,25 @@ body {
   padding: 14px;
   color: var(--white);
 }
+.btn-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+.form-status {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.form-status[data-state="success"] {
+  color: #065f46;
+  background-color: #d1fae5;
+}
+.form-status[data-state="error"] {
+  color: #991b1b;
+  background-color: #fee2e2;
+}
 .bg-emerald {
   background-color: var(--emerald);
 }
@@ -394,4 +413,110 @@ body {
   text-align: center;
   font-size: 0.8rem;
   border-top: 1px solid #1e293b;
+}
+
+/* --- SUBMISSIONS PAGE --- */
+.logo {
+  text-decoration: none;
+}
+.submissions-page {
+  min-height: calc(100vh - 140px);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+.submissions-page .section-header {
+  margin-bottom: 24px;
+}
+.submissions-page .section-header h1 {
+  color: var(--primary);
+}
+.submissions-status {
+  margin-bottom: 16px;
+  color: #475569;
+}
+.submissions-status[data-state="error"] {
+  color: #991b1b;
+}
+.submissions-list {
+  display: grid;
+  gap: 12px;
+}
+.submission-card {
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: var(--white);
+}
+.submission-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 0;
+  color: var(--text-dark);
+  background: var(--white);
+  text-align: left;
+  cursor: pointer;
+}
+.submission-toggle:hover,
+.submission-toggle[aria-expanded="true"] {
+  background: var(--bg-light);
+}
+.submission-toggle:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+.submission-title {
+  font-weight: 700;
+}
+.submission-date {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+.submission-details {
+  padding: 20px;
+  border-top: 1px solid #e2e8f0;
+  overflow-wrap: anywhere;
+}
+.submission-fields {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.4fr) 1fr;
+  gap: 8px 16px;
+}
+.submission-fields dt {
+  font-weight: 700;
+}
+.submission-photo {
+  display: block;
+  width: min(100%, 240px);
+  max-height: 280px;
+  margin-top: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+@media (max-width: 640px) {
+  .nav-container {
+    height: auto;
+    min-height: 70px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 12px;
+  }
+  .nav-links a {
+    margin-left: 0;
+  }
+  .submission-toggle {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

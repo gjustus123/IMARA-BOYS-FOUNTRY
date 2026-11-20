@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Imara Boys Foundry | Forging Character. Shaping Leaders.</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="api-config.js"></script>
+    <script src="app.js" defer></script>
     <!-- Google Fonts for sleek tech/corporate typography -->
     <link href="https://googleapis.com" rel="stylesheet" />
   </head>
@@ -19,6 +21,7 @@
           <a href="#donate">Sponsor</a>
           <a href="#mentor">Join Brotherhood</a>
           <a href="#contact">Contact</a>
+          <a href="submissions.html">Submissions</a>
         </nav>
       </div>
     </header>
@@ -119,13 +122,16 @@
     <section id="donate" class="form-section bg-light">
       <div class="form-card">
         <h3>Sponsor the Foundry</h3>
-        <p class="form-subtitle">Direct processing to our Java API Gateway</p>
-        <form action="donate" method="POST">
+        <p class="form-subtitle">Secure processing through our Node.js API</p>
+        <form action="/donate" method="POST" data-api-form="donate">
           <div class="form-group">
             <label>Amount (KES)</label>
             <input
               type="number"
               name="amount"
+              min="1"
+              max="150000"
+              step="1"
               required
               placeholder="e.g., 1000"
             />
@@ -137,11 +143,12 @@
           <button type="submit" class="btn btn-submit bg-emerald">
             Trigger STK Push
           </button>
+          <p class="form-status" data-form-status role="status" hidden></p>
         </form>
       </div>
     </section>
 
-    <!-- --- MENTOR ENROLLMENT (JAVA INGESTION FORM) --- -->
+    <!-- --- MENTOR ENROLLMENT (NODE.JS API FORM) --- -->
     <section id="mentor" class="form-section">
       <div class="form-container-wide">
         <div class="section-header">
@@ -152,10 +159,11 @@
           </p>
         </div>
         <form
-          action="mentor"
+          action="/mentor"
           method="POST"
           enctype="multipart/form-data"
           class="grid-form"
+          data-api-form="mentor"
         >
           <div class="form-group">
             <label>Full Name</label>
@@ -193,6 +201,7 @@
           <button type="submit" class="btn btn-submit btn-full">
             Submit Application
           </button>
+          <p class="form-status" data-form-status role="status" hidden></p>
         </form>
       </div>
     </section>
@@ -214,7 +223,7 @@
 
     <!-- --- FOOTER --- -->
     <footer class="footer">
-      <p>&copy; 2026 Imara Boys Foundry. Java Web Application Module.</p>
+      <p>&copy; 2026 Imara Boys Foundry. Node.js Web Application.</p>
     </footer>
   </body>
 </html>

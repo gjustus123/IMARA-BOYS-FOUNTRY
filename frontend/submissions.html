@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Submissions | Imara Boys Foundry</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="api-config.js"></script>
+    <script src="submissions.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <a class="logo" href="index.html">IMARA BOYS FOUNDRY</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="submissions.html" aria-current="page">Submissions</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="submissions-page">
+      <header class="section-header">
+        <h1>Submissions</h1>
+        <p>Review mentor applications and donation submissions.</p>
+      </header>
+      <p
+        class="submissions-status"
+        data-submissions-status
+        role="status"
+        aria-live="polite"
+      >
+        Loading submissions...
+      </p>
+      <div class="submissions-list" data-submissions-list></div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Imara Boys Foundry. Node.js Web Application.</p>
+    </footer>
+  </body>
+</html>

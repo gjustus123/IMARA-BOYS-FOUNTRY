@@ -1,0 +1,32 @@
+{
+  "name": "imara-boys-foundry",
+  "version": "1.0.0",
+  "description": "Node.js backend for Imara Boys Foundry",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test server.test.js json-store.test.js ../frontend/app.test.js",
+    "format": "prettier --write server.js server.test.js json-store.js json-store.test.js MPESA_SETUP.md ../frontend/index.html ../frontend/submissions.html ../frontend/app.js ../frontend/submissions.js ../frontend/app.test.js ../frontend/api-config.js ../frontend/style.css",
+    "format:check": "prettier --check server.js server.test.js json-store.js json-store.test.js MPESA_SETUP.md ../frontend/index.html ../frontend/submissions.html ../frontend/app.js ../frontend/submissions.js ../frontend/app.test.js ../frontend/api-config.js ../frontend/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjustus123/IMARA-BOYS-FOUNTRY.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gjustus123/IMARA-BOYS-FOUNTRY/issues"
+  },
+  "homepage": "https://github.com/gjustus123/IMARA-BOYS-FOUNTRY#readme",
+  "devDependencies": {
+    "prettier": "3.10.1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "sharp": "^0.35.5"
+  }
+}
